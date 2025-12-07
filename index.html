@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel & Restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-image: url(12.jpeg);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+    nav {
+      background: #006666;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* All sections hidden first */
+    section { 
+      padding: 30px;
+      background: white;
+      margin: 20px auto;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none; 
+    }
+
+    section.active { display: block; } /* Only active will show */
+
+    h2 { color: #008080; }
+
+    .gallery img {
+      width: 24%;
+      border-radius: 8px;
+      margin: 4px;
+    }
+
+    footer {
+      background: #008080;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hotel & Restaurant</h1>
+  <p>Relax • Eat • Enjoy</p>
+</header>
+
+<nav>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('rooms')">Rooms</a>
+  <a onclick="showPage('restaurant')">Restaurant</a>
+  <a onclick="showPage('gallery')">Gallery</a>
+  <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <h2>Welcome</h2>
+  <p>Experience seaside comfort and delicious dining at Hotel & Restaurant.</p>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <h2>Our Rooms</h2>
+  <div class="room">
+    <h3>Standard Room</h3>
+    <img src="7.jpeg" width="300">
+    <p>₱2,500/night</p>
+  </div>
+  <div class="room">
+    <h3>Deluxe Room</h3>
+    <img src="8.jpeg" width="300">
+    <p>₱4,000/night</p>
+  </div>
+  <div class="room">
+    <h3>Family Suite</h3>
+    <img src="9.jpeg" width="300">
+    <p>₱6,000/night</p>
+  </div>
+</section>
+
+<!-- RESTAURANT -->
+<section id="restaurant">
+  <h2>Restaurant Menu</h2>
+  <img src="11.webp" width="350">
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="1.jpeg">
+    <img src="2.jpeg">
+    <img src="3.jpeg">
+    <img src="4.jpeg">
+    <img src="5.jpeg">
+    <img src="6.jpeg">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Surigao del Norte | +63 9123 456 789 | HotRest@example.com</p>
+</section>
+
+<footer>
+  <p>© 2025 Hotel & Restaurant</p>
+</footer>
+
+<script>
+function showPage(page){
+  document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+  document.getElementById(page).classList.add("active");
+}
+</script>
+
+</body>
+</html>
